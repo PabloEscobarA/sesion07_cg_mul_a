@@ -1,38 +1,35 @@
 <div>
     <button onclick="draw()">Trazar</button>
+    <button onclick="rotarTrazar(1)">Girar Rectangulo 1</button>
+    <button onclick="rotarTrazar(2)">Girar Rectangulo 2</button>
 </div>
 <html>
     <canvas id="canvas" width="1920" height="1080"></canvas>
         <script type="text/javascript"> 
+        const context = canvas.getContext('2d');
+          var ctx = document.getElementById('canvas').getContext('2d');
+          context.clearRect(0,0, canvas.width, canvas.height);
+        function deg2rad(g){
+        return (Math.PI/180)*g;
+        }
+        function rotarTrazar(n){
+            if(n==1){
+            }
+        }
         function draw() 
         {
-            var ctx = document.getElementById('canvas').getContext('2d');
-
-                // left rectangles, rotate from canvas origin
                 ctx.save();
-                // blue rect
+                // first blue rect
                 ctx.fillStyle = '#0095DD';
                 ctx.fillRect(30, 30, 100, 100);
-                ctx.rotate((Math.PI / 180) * 25);
-                // grey rect
-                ctx.fillStyle = '#4D4E53';
-                ctx.fillRect(30, 30, 100, 100);
-                ctx.restore();
-
-                // right rectangles, rotate from rectangle center
-                // draw blue rect
+    
+                // second blue rect
                 ctx.fillStyle = '#0095DD';
                 ctx.fillRect(150, 30, 100, 100);
 
-                ctx.translate(200, 80); // translate to rectangle center
-                          // x = x + 0.5 * width
-                          // y = y + 0.5 * height
-                ctx.rotate((Math.PI / 180) * 25); // rotate
-                ctx.translate(-200, -80); // translate back
+                //Girar rectangulo 1
 
-                // draw grey rect
-                ctx.fillStyle = '#4D4E53';
-                ctx.fillRect(150, 30, 100, 100);
+                //Girar rectangulo 2
         }
     </script>
 </html>
