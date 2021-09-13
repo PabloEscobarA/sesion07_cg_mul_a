@@ -13,7 +13,26 @@
         function rotarTrazar(n){
 
             if(n==1){
-
+                ctx.save();
+                ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(30, 30, 100, 100);
+    ctx.restore();
+    ctx.rotate (deg2rad());
+    ctx.translate(200, 80);
+    
+    ctx.fillStyle = '#0095DD';
+    ctx.fillRect()
+            }
+            if(n==2){
+                ctx.save();
+                ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(150, 30, 100, 100);
+    ctx.restore();
+    ctx.rotate (deg2rad());
+    ctx.translate(-200, -80);
+    
+    ctx.fillStyle = '#0095DD';
+    ctx.fillRect()
             }
         }
         function draw() 
@@ -22,11 +41,9 @@
                 // First blue rect
                 ctx.fillStyle = '#0095DD';
                 ctx.fillRect(30, 30, 100, 100);
-                ctx.rotate(deg2rad*(45));
-
+            
                 // Second blue rect
                 ctx.fillRect(150, 30, 100, 100);
-                ctx.rotate(deg2rad*(60));
                 
 
         }
